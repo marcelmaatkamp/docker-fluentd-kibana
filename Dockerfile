@@ -62,7 +62,7 @@ ADD config/etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 VOLUME ["/data", "/var/log", "/etc/nginx/sites-enabled"]
 
 # Define working directory.
-WORKDIR /
+WORKDIR /data
 # Define default command.
 #CMD ["/elasticsearch/bin/elasticsearch"]
 
@@ -80,7 +80,7 @@ EXPOSE 9300
 EXPOSE 24224
 
 # Expose nginx http ports
-EXPOSE 80
-EXPOSE 443
+EXPOSE 9480
+EXPOSE 9443
 
 
